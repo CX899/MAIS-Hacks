@@ -39,25 +39,33 @@ function TextInput() {
     const inputed_text=document.getElementById("user-text").textContent;
     console.log(inputed_text);
     document.getElementById("user-text").textContent = "";//Empties input on click (not needed)
-    return matchWords(inputed_text)
+    let words = inputed_text,
+    wordArray = words.split(' ');
+
+    console.log(wordArray);
+
+    const bad_words = ["fuck", "cunt", "shit", "TH"]
+    const nice_words = ["thank you", "nice person", "nice", "colin"]
+
+    for (let i = 0; i < wordArray.length; i++) {
+        if (wordArray[i] in bad_words){
+            wordArray[i].replace(wordArray[i], nice_words[Math.floor(Math.random()*nice_words.length)])
+        }
+        else{
+            //pass
+        }
+        ;
+      }
     
-}
+      const final_text = wordArray.join(' ')
 
-function matchWords(inputed_text) {
-    const banned_words = ["fuck", "shit", "bitch"]
-
-    console.log("functions works!")
-
-    var regexMetachars = /[(){[*+?.\\^$|]/g;
-
-    for (var i = 0; i < banned_words.length; i++) {
-        banned_words[i] = banned_words[i].replace(regexMetachars, "\\$&");
-    }
-
-    var regex = new RegExp("\\b(?:" + banned_words.join("|") + ")\\b", "gi");
+      return document.getElementById("error-text").textContent = final_text;
     
-    return inputed_text.match(regex) || [];
-  
+    
 };
+
+//function suggest(correction_words) {
+   
+//};
 
 export default MainSite;
