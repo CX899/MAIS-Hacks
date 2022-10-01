@@ -22,6 +22,7 @@
   height: 75px;
   border: 15px solid #34557b;
   border-top-color: #ddc734;
+  border-bottom-color: #ddc734;
   border-radius: 50%;
   animation: loading 2s ease infinite;
 }

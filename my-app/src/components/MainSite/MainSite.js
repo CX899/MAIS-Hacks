@@ -55,7 +55,7 @@ function matchWords(inputed_text) {
     }
 
     var regex = new RegExp("\\b(?:" + banned_words.join("|") + ")\\b", "gi");
-
+    
     return inputed_text.match(regex) || [];
   
 };
