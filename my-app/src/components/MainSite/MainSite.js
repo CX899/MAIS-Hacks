@@ -6,6 +6,7 @@ import './MainSite.css';
 class MainSite extends React.Component{
   render() {
     return (
+
     <body>
         <div class="header-container">
         <div class="header">Toxicity Detector</div>
@@ -13,14 +14,17 @@ class MainSite extends React.Component{
         <div class="main">
             <div class="text-container"> 
                 <div class="user-text-container">
-                    <div id="user-text" placeholder="Enter Text" contenteditable="true" class="border border-primary"></div>
+                    <div id="user-text" placeholder="Enter Text" contenteditable="true" class="text-boarder"></div>
                 </div>
                 <div class="error-text-container">
-                    <div class="error-text">WHERE ERROR</div>
+                    <div class="error-text text-boarder">
+                        <div>Suggestions</div>
+                        <div id="suggestion-text">HELLO</div>
+                    </div>
                 </div>
             </div>
             <div class="button-container">
-                <button type="submit" onClick={TextInput} class="btn btn-outline-primary btn-lg"> Scan for toxicity</button>
+                <button type="submit" class="btn btn-outline-dark btn-lg"> Scan for toxicity</button>
             </div>
         </div>
         <div class="footer-container">
