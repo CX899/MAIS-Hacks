@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap%27%27');
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main{
+    border: 5px solid black;
+}
+.footer-container{
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-container{
+    display: flex;
+    justify-content: space-around;
+
+
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.user-text-container{
+    flex: 2;
+    padding: 2em 2em 0 2em;
+}
+
+.error-text-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 1em 2em 0 2em;
+
+}
+
+.button-container{
+    padding-top: 4em;
+}
+
+#user-text{
+    height: 20em;
+    word-wrap: break-word;
+    overflow-y:scroll;
+    padding: 1em 1em 1em 1em;
+
+
+
+}
+#error-text{
+
+}
+
+
+[contentEditable=true]:empty:before {
+    content: attr(placeholder);
+    opacity: 0.6;
+    padding-top: 1em;
+}
+
+.header, .footer{
+    font-size: xx-large;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+}
+
+.footer{
+    font-size: large;
+    padding-bottom: 0.25em;
+}

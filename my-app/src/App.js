@@ -1,12 +1,22 @@
 import './App.css';
-import TopSite from './components/Heading/';
+import MainSite from './components/MainSite/MainSite';
 import React from 'react';
 
 function App() {
   return (
-   <heading></heading>
+    <div>
+      <div class='loader'></div>
+      <MainSite></MainSite> 
+    </div>
   );
 };
+
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader")
+
+  loader.classList.add("loader-hidden");
+});
 
 console.log("Testing is working!")
 
