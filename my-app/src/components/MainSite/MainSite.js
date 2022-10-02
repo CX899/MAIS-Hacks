@@ -42,7 +42,6 @@ class MainSite extends React.Component{
 function TextInput() {
     const inputed_text=document.getElementById("user-text").textContent;
     console.log(inputed_text);
-    document.getElementById("user-text").textContent = "";//Empties input on click (not needed)
     let words = inputed_text,
     wordArray = words.toLowerCase().split(' ');
 
