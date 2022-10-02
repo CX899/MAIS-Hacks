@@ -9,7 +9,7 @@ class MainSite extends React.Component{
 
     <body>
         <div class="header-container">
-        <div class="header">Toxicity Detector</div>
+        <div class="header">HowToBeNice.io</div>
         </div>
         <div class="main">
             <div class="text-container"> 
@@ -18,13 +18,13 @@ class MainSite extends React.Component{
                 </div>
                 <div class="error-text-container">
                     <div class="error-text text-boarder">
-                        <div>Suggestions</div>
-                        <div id="suggestion-text">HELLO</div>
+                        <div class="subtitle">Suggestions</div>
+                        <div id="suggestion-text"></div>
                     </div>
                 </div>
             </div>
             <div class="button-container">
-                <button type="submit" class="btn btn-outline-dark btn-lg"> Scan for toxicity</button>
+                <button type="submit" onClick={TextInput} class="btn btn-outline-dark btn-lg"> Be Nice </button>
             </div>
         </div>
         <div class="footer-container">
@@ -44,7 +44,7 @@ function TextInput() {
     console.log(inputed_text);
     document.getElementById("user-text").textContent = "";//Empties input on click (not needed)
     let words = inputed_text,
-    wordArray = words.split(' ');
+    wordArray = words.toLowerCase().split(' ');
 
     console.log(wordArray);
 
@@ -52,18 +52,18 @@ function TextInput() {
     const nice_words = ["thank you", "nice person", "nice", "colin"]
 
     for (let i = 0; i < wordArray.length; i++) {
-        if (wordArray[i] in bad_words){
-            wordArray[i].replace(wordArray[i], nice_words[Math.floor(Math.random()*nice_words.length)])
+        if (bad_words.includes(wordArray[i])){
+            wordArray[i] = nice_words[Math.floor(Math.random()*nice_words.length)]
         }
         else{
-            //pass
+            console.log("something is wrong")
         }
         ;
       }
     
       const final_text = wordArray.join(' ')
 
-      return document.getElementById("error-text").textContent = final_text;
+      return document.getElementById("suggestion-text").textContent = final_text;
     
     
 };

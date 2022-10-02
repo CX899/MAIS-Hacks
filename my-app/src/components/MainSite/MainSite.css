@@ -66,6 +66,7 @@ body{
     
 
 }
+
 .error-text{
     display: flex;
     flex-direction: column;
@@ -102,4 +103,11 @@ body{
 .text-boarder{
     border: 5px solid var(--dark-slate);
     border-radius:13px ;
+
+}
+
+.subtitle{
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: underline;
 }
