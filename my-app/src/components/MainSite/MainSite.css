@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap%27');
+@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);
 
 :root{
     --dark-navy: #020c1b;
@@ -29,8 +30,8 @@ body{
 
 .header-container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     color: var(--lightest-slate);
 
 }
@@ -117,3 +118,47 @@ body{
     font-weight: bold;
     text-decoration: underline;
 }
+a{
+    text-decoration: none;
+}
+
+
+img {
+    animation: squigglevision 0.4s infinite alternate;
+    max-width: 100%;
+     }
+  
+  @keyframes squigglevision {
+    0% {
+      filter: url("#turbulence-1");
+    }
+    25% {
+      filter: url("#turbulence-2");
+    }
+    50% {
+      filter: url("#turbulence-3");
+    }
+    75% {
+      filter: url("#turbulence-4");
+    }
+    100% {
+      filter: url("#turbulence-5");
+    }
+  }
+  
+  
+  .avatars-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .logo{
+    width: 40px;
+    height:auto;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .spacer{
+    margin-right: 40px;
+  }

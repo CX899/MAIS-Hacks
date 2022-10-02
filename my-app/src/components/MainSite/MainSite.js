@@ -1,5 +1,6 @@
 import React from "react";
 import './MainSite.css';
+import svg from './Vector.svg'
 
 
 //Page HTML as react component
@@ -9,7 +10,11 @@ class MainSite extends React.Component{
 
     <body>
         <div class="header-container">
-        <div class="header"><a href="./">HowToBeNice.io</a></div>
+            <div><a href='./'><img src={svg} alt='reloading page' className='logo'></img></a></div>
+            <div class="header">
+                <a href="./">HowToBeNice.io</a>
+            </div>
+            <div class='spacer'> </div>
         </div>
         <div class="main">
             <div class="text-container"> 
