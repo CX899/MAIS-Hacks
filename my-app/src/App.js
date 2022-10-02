@@ -19,5 +19,4 @@ window.addEventListener("load", () => {
 });
 
 console.log("Testing is working!")
-
 export default App;
