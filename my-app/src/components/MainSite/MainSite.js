@@ -9,7 +9,7 @@ class MainSite extends React.Component{
 
     <body>
         <div class="header-container">
-        <div class="header">HowToBeNice.io</div>
+        <div class="header"><a href="./">HowToBeNice.io</a></div>
         </div>
         <div class="main">
             <div class="text-container"> 
